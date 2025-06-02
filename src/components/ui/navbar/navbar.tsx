@@ -12,9 +12,17 @@ import {
 import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { Icon } from "@iconify/react/dist/iconify.js";
+import MobileMenu from "./mobile-menu";
+import { useState } from "react";
 
 const Navbar = () => {
 	const pathname = usePathname();
+	const [isOpen, setIsOpen] = useState<boolean>(false);
+
+	const handleCloseMenu = () => {
+		setIsOpen(false);
+	};
 
 	const nav = [
 		{ name: "Beranda", href: "/" },
@@ -26,6 +34,7 @@ const Navbar = () => {
 
 	return (
 		<nav className="sticky top-0 left-0 z-50 bg-white border-b">
+			<MobileMenu isOpen={isOpen} handleCloseMenu={handleCloseMenu} data={nav} />
 			<div className="container px-10 mx-auto">
 				<div className="flex items-center justify-between">
 					<div className="w-fit">
@@ -38,7 +47,7 @@ const Navbar = () => {
 						/>
 					</div>
 					<NavigationMenu>
-						<NavigationMenuList>
+						<NavigationMenuList className="hidden md:flex">
 							{nav.map((item) => (
 								<NavigationMenuItem key={item.name}>
 									<NavigationMenuLink
@@ -59,9 +68,12 @@ const Navbar = () => {
 							))}
 						</NavigationMenuList>
 					</NavigationMenu>
-					<div className="w-fit">
+					<div className="w-fit hidden md:block">
 						<Button className="">Book Now</Button>
 					</div>
+					<button className="cursor-pointer lg:hidden" onClick={() => setIsOpen(true)}>
+						<Icon icon="mage:dash-menu" width="30" height="30" />
+					</button>
 				</div>
 			</div>
 		</nav>
