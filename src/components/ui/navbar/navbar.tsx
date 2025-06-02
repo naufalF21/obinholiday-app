@@ -60,7 +60,7 @@ const Navbar = () => {
 						</NavigationMenuList>
 					</NavigationMenu>
 					<div className="w-fit">
-						<Button>Book Now</Button>
+						<Button className="">Book Now</Button>
 					</div>
 				</div>
 			</div>
