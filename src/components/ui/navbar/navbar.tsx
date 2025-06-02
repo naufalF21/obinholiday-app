@@ -38,7 +38,7 @@ const Navbar = () => {
 						/>
 					</div>
 					<NavigationMenu>
-						<NavigationMenuList>
+						<NavigationMenuList className="gap-5">
 							{nav.map((item) => (
 								<NavigationMenuItem key={item.name}>
 									<NavigationMenuLink
