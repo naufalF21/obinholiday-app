@@ -3,6 +3,8 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import { Button } from "../button";
+import { AnimatePresence, motion } from "motion/react";
+import { mobileNavAnimation } from "./_animations";
 
 const MobileMenu = ({
 	isOpen,
@@ -13,10 +15,19 @@ const MobileMenu = ({
 	handleCloseMenu: () => void;
 	data: { name: string; href: string }[];
 }) => {
+	const { transition } = mobileNavAnimation;
+
 	return (
-		<>
+		<AnimatePresence>
 			{isOpen && (
-				<div className="fixed top-0 z-50 h-full w-full bg-white">
+				<motion.div
+					className="fixed top-0 z-50 h-full w-full bg-white"
+					variants={mobileNavAnimation.menuVariants}
+					initial="initial"
+					animate="animate"
+					exit="exit"
+					transition={transition.menu}
+				>
 					<div className="flex h-full flex-col">
 						<div className="z-30 flex justify-end px-10 py-8">
 							<button onClick={handleCloseMenu} className="cursor-pointer">
@@ -41,9 +52,9 @@ const MobileMenu = ({
 							<Button className="text-xl w-full py-5 font-medium">Book Now</Button>
 						</div>
 					</div>
-				</div>
+				</motion.div>
 			)}
-		</>
+		</AnimatePresence>
 	);
 };
 
