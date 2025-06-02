@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Taprom } from "next/font/google";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -13,6 +13,12 @@ const poppins = Poppins({
 	weight: "400",
 });
 
+const taprom = Taprom({
+	subsets: ["latin"],
+	weight: "400",
+	variable: "--font-taprom",
+});
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -20,7 +26,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={`${poppins.className} antialiased`}>{children}</body>
+			<body className={`${poppins.className} ${taprom.variable} antialiased`}>
+				{children}
+			</body>
 		</html>
 	);
 }

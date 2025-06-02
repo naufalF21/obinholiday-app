@@ -18,14 +18,19 @@ const HeroDescription = () => {
 			</div>
 			<div className="w-full md:w-1/2 mb-12 md:mb-0">
 				<div className="flex gap-2 items-center mb-14">
-					<i className="fa-solid fa-compass text-[#134B70]"></i>
+					<Icon
+						icon="mage:compass-fill"
+						width="24"
+						height="24"
+						className="text-primary"
+					/>
 					<p className="font-semibold capitalize text-sm text-black">
 						Let&apos;s go around the world
 					</p>
 				</div>
 				<h1 className="font-bold text-3xl capitalize text-black max-w-lg leading-none mb-6 md:text-5xl">
 					Let&apos;s travel and{" "}
-					<span className="font-kedua text-[#134B70] ">visit new</span>, very beautiful
+					<span className="font-taprom text-[#134B70] ">Visit new</span>, very beautiful
 					places
 				</h1>
 				<p className="leading-tights max-w-lg text-gray-500 text-sm mb-12 capitalize">
