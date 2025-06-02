@@ -37,7 +37,7 @@ const FloatImages = () => {
 					className="object-cover"
 				/>
 			</div>
-			<div className="w-[165px] h-[70px] px-[5px] bg-white rounded-md shadow-lg flex items-center gap-2 absolute right-9 z-30">
+			<div className="w-[165px] h-[70px] px-[5px] mt-3 bg-white rounded-md shadow-lg flex items-center gap-2 absolute right-9 z-30">
 				<div className="w-[70px] h-[50px] rounded-md overflow-hidden">
 					<Image
 						src="https://images.pexels.com/photos/2335126/pexels-photo-2335126.jpeg"
