@@ -28,7 +28,7 @@ const Services = () => {
 						className="md:w-[180px]"
 					/>
 				</div>
-				<div className="container mx-auto px-10">
+				<div className="container mx-auto px-6 md:px-10">
 					<div className="w-full flex justify-between">
 						<div className="w-full md:w-1/2 relative hidden md:block">
 							<div className="w-[350px] h-[300px] overflow-hidden border-[5px] border-white rounded-lg absolute">

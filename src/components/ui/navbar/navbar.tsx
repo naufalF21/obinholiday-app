@@ -35,7 +35,7 @@ const Navbar = () => {
 	return (
 		<nav className="sticky top-0 left-0 z-50 bg-white border-b">
 			<MobileMenu isOpen={isOpen} handleCloseMenu={handleCloseMenu} data={nav} />
-			<div className="container px-10 mx-auto">
+			<div className="container px-6 md:px-10 mx-auto">
 				<div className="flex items-center justify-between">
 					<div className="w-fit">
 						<Image
