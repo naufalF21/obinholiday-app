@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const HeroDescription = () => {
 	return (
 		<>
-			<div className="w-full md:hidden mb-12">
+			<div className="w-full md:hidden">
 				<div className="h-[500px] overflow-hidden rounded-lg relative">
 					<Image
 						src="https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg"
@@ -16,7 +16,7 @@ const HeroDescription = () => {
 					/>
 				</div>
 			</div>
-			<div className="w-full md:w-1/2 mb-12 md:mb-0">
+			<div className="w-full md:w-1/2">
 				<div className="flex gap-2 items-center mb-14">
 					<Icon
 						icon="mage:compass-fill"
@@ -37,12 +37,12 @@ const HeroDescription = () => {
 					don&apos;t delay, it&apos;s time for you to travel around the world and discover
 					other new andinteresting things.
 				</p>
-				<div className="flex gap-5">
-					<Button>
+				<div className="flex gap-5 ">
+					<Button className="text-base">
 						Explore Now
 						<Icon icon="mage:caret-right-fill" width="24" height="24" />
 					</Button>
-					<Button variant="outline">
+					<Button variant="outline" className="text-base">
 						Packages
 						<Icon icon="mage:archive-fill" width="24" height="24" />
 					</Button>

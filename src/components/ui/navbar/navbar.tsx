@@ -25,7 +25,7 @@ const Navbar = () => {
 	];
 
 	return (
-		<nav className="sticky top-0 left-0 z-50 bg-white">
+		<nav className="sticky top-0 left-0 z-50 bg-white border-b">
 			<div className="container px-10 mx-auto">
 				<div className="flex items-center justify-between">
 					<div className="w-fit">
@@ -38,7 +38,7 @@ const Navbar = () => {
 						/>
 					</div>
 					<NavigationMenu>
-						<NavigationMenuList className="gap-5">
+						<NavigationMenuList>
 							{nav.map((item) => (
 								<NavigationMenuItem key={item.name}>
 									<NavigationMenuLink
