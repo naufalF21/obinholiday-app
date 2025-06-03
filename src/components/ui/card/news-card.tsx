@@ -55,17 +55,19 @@ const SideNewsCard = ({ news }: { news: NewsCardProps }) => {
 
 	return (
 		<div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
-			<div className="w-full h-[200px] lg:h-[120px] overflow-hidden">
+			<div className="w-full lg:w-[200px] h-[200px] lg:h-[120px] overflow-hidden">
 				<Image
 					src={image}
 					alt={title}
 					className="w-full h-full object-cover hover:scale-110 transition duration-500"
-					width={300}
+					width={200}
 					height={250}
 				/>
 			</div>
 			<div className="px-5 py-5 lg:py-0 flex flex-col justify-center">
-				<h3 className="font-bold mb-2 hover:text-primary transition text-lg">{title}</h3>
+				<h3 className="font-bold mb-2 hover:text-primary transition text-lg lg:text-base">
+					{title}
+				</h3>
 				<p className="text-gray-400 text-sm mb-3">{date}</p>
 				<a
 					href="#"
