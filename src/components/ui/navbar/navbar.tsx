@@ -35,7 +35,7 @@ const Navbar = () => {
 	return (
 		<nav className="sticky top-0 left-0 z-50 bg-white border-b">
 			<MobileMenu isOpen={isOpen} handleCloseMenu={handleCloseMenu} data={nav} />
-			<div className="container px-6 md:px-10 mx-auto">
+			<div className="container px-6 md:px-0 lg:px-10 mx-auto">
 				<div className="flex items-center justify-between">
 					<div className="w-fit">
 						<Image
@@ -47,7 +47,7 @@ const Navbar = () => {
 						/>
 					</div>
 					<NavigationMenu>
-						<NavigationMenuList className="hidden md:flex">
+						<NavigationMenuList className="hidden lg:flex">
 							{nav.map((item) => (
 								<NavigationMenuItem key={item.name}>
 									<NavigationMenuLink
@@ -68,7 +68,7 @@ const Navbar = () => {
 							))}
 						</NavigationMenuList>
 					</NavigationMenu>
-					<div className="w-fit hidden md:block">
+					<div className="w-fit hidden lg:block">
 						<Button className="">Book Now</Button>
 					</div>
 					<button className="cursor-pointer lg:hidden" onClick={() => setIsOpen(true)}>

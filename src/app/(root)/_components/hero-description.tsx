@@ -37,7 +37,7 @@ const HeroDescription = () => {
 					don&apos;t delay, it&apos;s time for you to travel around the world and discover
 					other new andinteresting things.
 				</p>
-				<div className="flex gap-5">
+				<div className="flex gap-5 flex-col md:flex-row">
 					<Button className="text-base">
 						Explore Now
 						<Icon icon="mage:caret-right-fill" width="24" height="24" />

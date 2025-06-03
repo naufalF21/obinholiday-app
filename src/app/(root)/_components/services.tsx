@@ -17,8 +17,8 @@ const Services = () => {
 	];
 
 	return (
-		<div className="min-h-[80vh]">
-			<div className="w-full pt-20 pb-32 relative bg-gray-50">
+		<div className="lg:min-h-[60vh]">
+			<div className="w-full py-14 lg: lg:py-20 relative bg-gray-50">
 				<div className="absolute bottom-4 left-10">
 					<Image
 						src="assets/elements/titik.svg"
@@ -55,22 +55,23 @@ const Services = () => {
 								things you need prepare{" "}
 								<span className="text-primary">before traveling</span>
 							</h2>
-
-							{textServices.map((service, index) => (
-								<div className="text-black mb-4" key={index}>
-									<div className="flex items-center gap-3 mb-2">
-										<h3 className="text-xl md:text-2xl capitalize">{`0${
-											index + 1
-										}.`}</h3>
-										<h3 className="text-xl md:text-2xl font-semibold capitalize">
-											{service.title}
-										</h3>
+							<div className="flex flex-col gap-5">
+								{textServices.map((service, index) => (
+									<div className="text-black" key={index}>
+										<div className="flex items-center gap-3 mb-2">
+											<h3 className="text-xl md:text-2xl capitalize">{`0${
+												index + 1
+											}.`}</h3>
+											<h3 className="text-xl md:text-2xl font-semibold capitalize">
+												{service.title}
+											</h3>
+										</div>
+										<p className="font-light capitalize text-black max-w-84 ml-12">
+											{service.description}
+										</p>
 									</div>
-									<p className="font-light capitalize text-black max-w-84 ml-12">
-										{service.description}
-									</p>
-								</div>
-							))}
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
