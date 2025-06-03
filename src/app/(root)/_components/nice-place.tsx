@@ -21,7 +21,7 @@ const NicePlace = () => {
 	];
 
 	return (
-		<header className="w-full py-10">
+		<header className="w-full py-10 mb-10">
 			<div className="container mx-auto px-6 lg:px-10">
 				<div className="flex justify-between items-center">
 					<div className="w-full">

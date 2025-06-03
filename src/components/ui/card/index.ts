@@ -1,2 +1,3 @@
-export * from "./destination";
-export * from "./place";
+export * from "./destination-card";
+export * from "./place-card";
+export * from "./news-card";
