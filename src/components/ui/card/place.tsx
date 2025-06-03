@@ -1,3 +1,5 @@
+"use client";
+
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import React from "react";
@@ -10,6 +12,7 @@ interface PlaceCardProps {
 
 const PlaceCard = ({ place }: { place: PlaceCardProps }) => {
 	const { name, location, image } = place;
+	const [like, setLike] = React.useState(false);
 
 	return (
 		<div className="w-full md:w-1/3 relative rounded-md shadow-md">
@@ -25,7 +28,23 @@ const PlaceCard = ({ place }: { place: PlaceCardProps }) => {
 			<div className="flex flex-col gap-3 p-5">
 				<div className="flex justify-between items-center">
 					<h3 className="font-bold capitalize text-2xl text-black">{name}</h3>
-					<i className="fa-solid fa-heart text-red-500"></i>
+					<button className="cursor-pointer" onClick={() => setLike(!like)}>
+						{like ? (
+							<Icon
+								icon="mage:heart-fill"
+								width="24"
+								height="24"
+								className="text-red-500"
+							/>
+						) : (
+							<Icon
+								icon="mage:heart"
+								width="24"
+								height="24"
+								className="text-red-500"
+							/>
+						)}
+					</button>
 				</div>
 				<div className="flex gap-2 items-center">
 					<Icon
