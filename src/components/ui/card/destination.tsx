@@ -3,14 +3,14 @@ import Image from "next/image";
 
 interface DestinationCardProps {
 	province: string;
-	name: string;
+	location: string;
 	image: string;
 	rating: number;
 	price: number;
 }
 
 const DestinationCard = ({ destination }: { destination: DestinationCardProps }) => {
-	const { province, name, image, rating, price } = destination;
+	const { province, location, image, rating, price } = destination;
 
 	return (
 		<div className="w-full relative mb-24">
@@ -46,7 +46,7 @@ const DestinationCard = ({ destination }: { destination: DestinationCardProps })
 								<p className="text-sm font-medium">{rating}</p>
 							</div>
 						</div>
-						<h2 className="font-bold text-lg text-black mb-4 capitalize">{name}</h2>
+						<h2 className="font-bold text-lg text-black mb-4 capitalize">{location}</h2>
 						<div className="flex justify-between items-center">
 							<p className="font-semibold text-lg capitalize text-gray-700">
 								Rp. {price.toLocaleString()}

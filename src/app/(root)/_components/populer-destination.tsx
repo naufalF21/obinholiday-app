@@ -7,33 +7,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const PopulerDestination = () => {
 	const destinations = [
 		{
-			id: 1,
 			province: "Bali",
-			name: "Nusa Dua",
+			location: "Nusa Dua",
 			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
 			rating: 4.5,
 			price: 500000,
 		},
 		{
-			id: 2,
 			province: "Sulawesi Utara",
-			name: "Taman Bunaken",
+			location: "Taman Bunaken",
 			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
 			rating: 4.4,
 			price: 700000,
 		},
 		{
-			id: 3,
 			province: "NTB",
-			name: "Gunung Rinjani",
+			location: "Gunung Rinjani",
 			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
 			rating: 4.6,
 			price: 600000,
 		},
 		{
-			id: 4,
 			province: "Sumatera Utara",
-			name: "Danau Toba",
+			location: "Danau Toba",
 			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
 			rating: 4.5,
 			price: 800000,
@@ -41,7 +37,7 @@ const PopulerDestination = () => {
 	];
 
 	return (
-		<header className="w-full py-14 min-h-screen">
+		<header className="w-full pt-16">
 			<div className="container mx-auto px-6 lg:px-10">
 				<div className="flex justify-between items-center">
 					<div className="w-full">
@@ -70,7 +66,7 @@ const PopulerDestination = () => {
 						}}
 					>
 						{destinations.map((destination) => (
-							<SwiperSlide key={destination.id}>
+							<SwiperSlide key={destination.location}>
 								<DestinationCard destination={destination} />
 							</SwiperSlide>
 						))}
