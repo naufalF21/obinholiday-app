@@ -27,7 +27,9 @@ const PlaceCard = ({ place }: { place: PlaceCardProps }) => {
 			</div>
 			<div className="flex flex-col gap-3 p-5">
 				<div className="flex justify-between items-center">
-					<h3 className="font-bold capitalize text-2xl text-black">{name}</h3>
+					<h3 className="font-bold capitalize text-xl md:text-lg lg:text-2xl text-black">
+						{name}
+					</h3>
 					<button className="cursor-pointer" onClick={() => setLike(!like)}>
 						{like ? (
 							<Icon

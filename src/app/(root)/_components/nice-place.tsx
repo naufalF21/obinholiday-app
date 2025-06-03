@@ -30,7 +30,7 @@ const NicePlace = () => {
 						</h2>
 					</div>
 				</div>
-				<div className="w-full flex flex-col md:flex-row gap-10 md:gap-5">
+				<div className="w-full flex flex-col md:flex-row gap-10 md:gap-5 lg:gap-8">
 					{places.map((place) => (
 						<PlaceCard place={place} key={place.name} />
 					))}
