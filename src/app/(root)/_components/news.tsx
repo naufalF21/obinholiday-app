@@ -29,7 +29,7 @@ const News = () => {
 	];
 
 	return (
-		<header className="w-full py-10 bg-gray-50">
+		<header className="w-full py-20 bg-gray-50">
 			<div className="container mx-auto px-6 lg:px-10">
 				<h1 className="text-xl md:text-3xl font-bold text-center mb-12">
 					Latest News About <br />
