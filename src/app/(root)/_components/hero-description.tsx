@@ -33,11 +33,11 @@ const HeroDescription = () => {
 					<span className="font-taprom text-[#134B70] ">Visit new</span>, very beautiful
 					places
 				</h1>
-				<p className="leading-tights max-w-lg text-gray-500 text-sm mb-6 capitalize md:mb-12">
+				<p className="leading-tights max-w-lg text-gray-500 text-sm mb-6 capitalize">
 					don&apos;t delay, it&apos;s time for you to travel around the world and discover
 					other new andinteresting things.
 				</p>
-				<div className="flex gap-5">
+				<div className="flex gap-5 flex-col md:flex-row">
 					<Button className="text-base">
 						Explore Now
 						<Icon icon="mage:caret-right-fill" width="24" height="24" />

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Taprom } from "next/font/google";
 import "@/styles/globals.css";
+import "swiper/css";
+import "swiper/css/pagination"; // Import pagination styles
 
 export const metadata: Metadata = {
 	title: "Obin Holiday - Travel Agency",

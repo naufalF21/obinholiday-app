@@ -28,7 +28,7 @@ const MobileMenu = ({
 					exit="exit"
 					transition={transition.menu}
 				>
-					<div className="flex h-full flex-col">
+					<div className="flex h-full flex-col md:container md:mx-auto">
 						<div className="z-30 flex justify-end px-6 py-8">
 							<button onClick={handleCloseMenu} className="cursor-pointer">
 								<Icon icon="mage:minus" width="30" height="30" />
@@ -48,7 +48,7 @@ const MobileMenu = ({
 								</li>
 							))}
 						</ul>
-						<div className="w-full p-6">
+						<div className="w-full p-6 md:pb-10">
 							<Button className="text-xl w-full py-5 font-medium">Book Now</Button>
 						</div>
 					</div>
