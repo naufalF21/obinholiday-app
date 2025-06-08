@@ -2,6 +2,7 @@
 
 import { FeaturedNewsCard, SideNewsCard } from "@/components/ui/card";
 import React from "react";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const News = () => {
@@ -45,20 +46,34 @@ const News = () => {
 						))}
 					</div>
 
-					<div className="lg:hidden">
+					<div className="lg:hidden relative">
 						<Swiper
 							spaceBetween={20}
-							loop={true}
+							loop={false}
+							pagination={{
+								clickable: true,
+							}}
+							modules={[Pagination]}
 							breakpoints={{
 								480: {
 									slidesPerView: 1,
 								},
-								// when window width is >= 640px
 								768: {
 									slidesPerView: 2,
 									spaceBetween: 40,
 								},
 							}}
+							className="h-[370px] md:h-[260px]"
+							style={
+								{
+									"--swiper-pagination-color": "#134B70",
+									"--swiper-pagination-bullet-inactive-color": "#999999",
+									"--swiper-pagination-bullet-inactive-opacity": "1",
+									"--swiper-pagination-bullet-size": "10px",
+									"--swiper-pagination-bottom": "0",
+									"--swiper-pagination-bullet-horizontal-gap": "6px",
+								} as React.CSSProperties
+							}
 						>
 							{sideNews.map((news, index) => (
 								<SwiperSlide key={index}>

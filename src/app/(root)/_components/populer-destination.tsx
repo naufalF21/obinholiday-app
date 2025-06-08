@@ -2,6 +2,7 @@
 
 import { DestinationCard } from "@/components/ui/card";
 import React from "react";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const PopulerDestination = () => {
@@ -49,7 +50,11 @@ const PopulerDestination = () => {
 				<div>
 					<Swiper
 						spaceBetween={20}
-						loop={true}
+						loop={false}
+						pagination={{
+							clickable: true,
+						}}
+						modules={[Pagination]}
 						breakpoints={{
 							480: {
 								slidesPerView: 1,
@@ -64,6 +69,17 @@ const PopulerDestination = () => {
 								spaceBetween: 20,
 							},
 						}}
+						className="h-[460px] md:h-[470px]"
+						style={
+							{
+								"--swiper-pagination-color": "#134B70",
+								"--swiper-pagination-bullet-inactive-color": "#999999",
+								"--swiper-pagination-bullet-inactive-opacity": "1",
+								"--swiper-pagination-bullet-size": "10px",
+								"--swiper-pagination-bottom": "0",
+								"--swiper-pagination-bullet-horizontal-gap": "6px",
+							} as React.CSSProperties
+						}
 					>
 						{destinations.map((destination) => (
 							<SwiperSlide key={destination.location}>
