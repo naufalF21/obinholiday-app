@@ -7,9 +7,9 @@ const Footer = () => {
 	return (
 		<footer className="bg-[#EEEEEE] text-[#134B70]">
 			<div className="container mx-auto px-6 lg:px-10 py-10">
-				<div className="flex flex-col lg:flex-row gap-10 lg:gap-0">
+				<div className="flex flex-col md:flex-row gap-5 lg:gap-10 md:gap-10">
 					<div className="w-full flex flex-col gap-5">
-						<div className="mx-auto lg:mx-0">
+						<div className="mx-auto md:mx-0">
 							<Image
 								src="/assets/logo/logo-and-text.svg"
 								alt="logo"
@@ -22,7 +22,7 @@ const Footer = () => {
 								Experience the world&apos;s finest destinations with our expertly
 								curated travel packages.
 							</p>
-							<ul className="flex items-center lg:gap-3 lg:justify-start justify-between">
+							<ul className="flex items-center md:gap-3 md:justify-start justify-between">
 								<li className="hover:bg-primary hover:text-white p-2 hover:rounded-full">
 									<Link href="#">
 										<Icon icon="hugeicons:facebook-02" width="24" height="24" />
