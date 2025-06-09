@@ -24,7 +24,7 @@ const DestinationCard = ({ destination }: { destination: DestinationCardProps })
 				/>
 			</div>
 			<div className="w-full flex justify-center">
-				<div className="w-[90%] bg-white rounded-md px-4 py-5 shadow-lg absolute -bottom-16">
+				<div className="w-[90%] bg-white rounded-md p-6 shadow-lg absolute -bottom-16">
 					<div className="flex flex-col">
 						<div className="flex justify-between mb-2 items-center">
 							<div className="flex gap-2 items-center">
