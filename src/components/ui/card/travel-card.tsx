@@ -8,10 +8,11 @@ interface DestinationCardProps {
 	image: string;
 	rating: number;
 	price: number;
+	icon: string;
 }
 
 const TravelCard = ({ destination }: { destination: DestinationCardProps }) => {
-	const { province, location, image, rating, price } = destination;
+	const { province, location, image, rating, price, icon } = destination;
 
 	return (
 		<div className="card-hover bg-white rounded-xl shadow-lg">
@@ -24,15 +25,10 @@ const TravelCard = ({ destination }: { destination: DestinationCardProps }) => {
 					height={200}
 				/>
 			</div>
-			<div className="p-6 flex flex-col gap-5">
+			<div className="py-8 px-6 flex flex-col gap-4">
 				<div className="flex items-center justify-between">
 					<div className="flex items-center gap-2">
-						<Icon
-							icon="mage:map-marker-fill"
-							width="16"
-							height="16"
-							className="text-primary"
-						/>
+						<Icon icon={icon} width="16" height="16" className="text-primary" />
 						<span className="text-gray-600 text-sm">{province}</span>
 					</div>
 					<div className="text-gray-600 text-sm flex items-center gap-2">
@@ -47,9 +43,11 @@ const TravelCard = ({ destination }: { destination: DestinationCardProps }) => {
 				</div>
 				<h3 className="text-xl font-semibold">{location}</h3>
 				<p className="text-gray-600 text-base">Rp. {price.toLocaleString()}</p>
-				<button className="plus-button bg-primary text-white rounded-full p-2 hover:shadow-lg w-fit">
-					<Icon icon="mage:plus" className="w-6 h-6" />
-				</button>
+				<div className="flex justify-end items-center">
+					<button className="plus-button bg-primary text-white rounded-full p-2 hover:shadow-lg w-fit">
+						<Icon icon="mage:plus" className="w-6 h-6" />
+					</button>
+				</div>
 			</div>
 		</div>
 	);

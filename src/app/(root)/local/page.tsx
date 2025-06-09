@@ -7,6 +7,7 @@ export default function Local() {
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.5,
 		price: 500000,
+		icon: "mage:map-marker-fill",
 	};
 
 	return (
