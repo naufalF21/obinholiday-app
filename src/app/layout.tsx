@@ -3,6 +3,7 @@ import { Poppins, Taprom } from "next/font/google";
 import "@/styles/globals.css";
 import "swiper/css";
 import "swiper/css/pagination"; // Import pagination styles
+import Providers from "./providers";
 
 export const metadata: Metadata = {
 	title: "Obin Holiday - Travel Agency",
@@ -29,7 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${poppins.className} ${taprom.variable} antialiased`}>
-				{children}
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	);
