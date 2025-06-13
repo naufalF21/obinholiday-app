@@ -1,15 +1,21 @@
+"use client";
+
 import { DestinationInterface } from "@/types/destination";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const DestinationCard = ({ destination }: { destination: DestinationInterface }) => {
 	const { name, location, image, rating, price, link } = destination;
 
+	const pathname = usePathname();
+	const updatedLink = pathname === "/" ? `/local/${link}` : link;
+
 	return (
 		<div className="w-full relative mb-24">
 			<div className="h-[350px]  overflow-hidden rounded-md group">
-				<Link href={`${link}`}>
+				<Link href={updatedLink}>
 					<Image
 						src={image}
 						alt=""
@@ -50,7 +56,7 @@ const DestinationCard = ({ destination }: { destination: DestinationInterface })
 								Rp. {price.toLocaleString()}
 							</p>
 							<Link
-								href={`${link}`}
+								href={updatedLink}
 								className="w-[40px] h-[40px] bg-[#134B70] rounded-full flex justify-center items-center hover:bg-white border shadow-md hover:border-[#134B70] hover:text-[#134B70] text-white cursor-pointer"
 							>
 								<Icon icon="mage:chevron-right" width="20" height="20" />
