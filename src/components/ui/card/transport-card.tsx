@@ -1,11 +1,11 @@
-import { DestinationInterface } from "@/types/destination";
+import { TransportationInterface } from "@/types/transportation";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
-	const { name, location, image, rating, price, icon, link } = destination;
+const TransportCard = ({ transport }: { transport: TransportationInterface }) => {
+	const { type, name, image, price, rating, icon, link } = transport;
 
 	return (
 		<div className="card-hover bg-white rounded-xl shadow-lg">
@@ -22,7 +22,7 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 				<div className="flex items-center justify-between">
 					<div className="flex items-center gap-2">
 						<Icon icon={icon} width="16" height="16" className="text-primary" />
-						<span className="text-gray-600 text-sm">{location}</span>
+						<span className="text-gray-600 text-sm">{type}</span>
 					</div>
 					<div className="text-gray-600 text-sm flex items-center gap-2">
 						<Icon
@@ -34,7 +34,7 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 						<span>{rating}</span>
 					</div>
 				</div>
-				<h3 className="text-xl font-semibold min-h-[3rem]">{name}</h3>
+				<h3 className="text-xl font-semibold">{name}</h3>
 				<p className="text-gray-600 text-base">Rp. {price.toLocaleString()}</p>
 				<div className="flex justify-end items-center">
 					<Link
@@ -49,4 +49,4 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 	);
 };
 
-export default TravelCard;
+export default TransportCard;
