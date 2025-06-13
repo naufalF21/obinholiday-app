@@ -2,6 +2,14 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import { DestinationInterface } from "@/types/destination";
+import {
+	Breadcrumb,
+	BreadcrumbItem,
+	BreadcrumbLink,
+	BreadcrumbList,
+	BreadcrumbPage,
+	BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 const InformationSection = ({ data }: { data: DestinationInterface }) => {
 	const { location, name, duration, price } = data;
@@ -16,7 +24,22 @@ const InformationSection = ({ data }: { data: DestinationInterface }) => {
 					className="w-full h-[600px] object-cover rounded-xl drop-shadow-xl"
 				/>
 			</div>
-			<div className="flex flex-col gap-6 py-5">
+			<div className="flex flex-col gap-6">
+				<Breadcrumb>
+					<BreadcrumbList>
+						<BreadcrumbItem>
+							<BreadcrumbLink href="/">Beranda</BreadcrumbLink>
+						</BreadcrumbItem>
+						<BreadcrumbSeparator />
+						<BreadcrumbItem>
+							<BreadcrumbLink href="/local">Wisata Lokal</BreadcrumbLink>
+						</BreadcrumbItem>
+						<BreadcrumbSeparator />
+						<BreadcrumbItem>
+							<BreadcrumbPage>{name}</BreadcrumbPage>
+						</BreadcrumbItem>
+					</BreadcrumbList>
+				</Breadcrumb>
 				<h1 className="font-semibold text-3xl">
 					Paket Wisata {name} {duration}
 				</h1>

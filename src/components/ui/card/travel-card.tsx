@@ -10,13 +10,15 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 	return (
 		<div className="card-hover bg-white rounded-xl shadow-lg">
 			<div className="relative overflow-hidden rounded-t-xl h-56">
-				<Image
-					alt="Nusa Dua"
-					className="w-full h-full object-cover transform hover:scale-110 transition duration-500"
-					src={image}
-					width={200}
-					height={200}
-				/>
+				<Link href={link}>
+					<Image
+						alt="Nusa Dua"
+						className="w-full h-full object-cover transform hover:scale-110 transition duration-500"
+						src={image}
+						width={200}
+						height={200}
+					/>
+				</Link>
 			</div>
 			<div className="py-8 px-6 flex flex-col gap-4">
 				<div className="flex items-center justify-between">

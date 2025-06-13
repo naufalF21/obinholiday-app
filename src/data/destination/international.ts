@@ -2,8 +2,8 @@ import { DestinationInterface } from "@/types/destination";
 
 export const InternationalData: DestinationInterface[] = [
 	{
-		province: "France",
-		location: "Paris",
+		location: "France",
+		name: "Paris",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.8,
 		price: 2500000,
@@ -11,8 +11,8 @@ export const InternationalData: DestinationInterface[] = [
 		link: "international/paris",
 	},
 	{
-		province: "Japan",
-		location: "Tokyo",
+		location: "Japan",
+		name: "Tokyo",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.9,
 		price: 3000000,
@@ -20,8 +20,8 @@ export const InternationalData: DestinationInterface[] = [
 		link: "international/tokyo",
 	},
 	{
-		province: "Italy",
-		location: "Rome",
+		location: "Italy",
+		name: "Rome",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.7,
 		price: 2750000,
@@ -29,8 +29,8 @@ export const InternationalData: DestinationInterface[] = [
 		link: "international/rome",
 	},
 	{
-		province: "Spain",
-		location: "Barcelona",
+		location: "Spain",
+		name: "Barcelona",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.6,
 		price: 2450000,
@@ -38,8 +38,8 @@ export const InternationalData: DestinationInterface[] = [
 		link: "international/barcelona",
 	},
 	{
-		province: "USA",
-		location: "New York",
+		location: "USA",
+		name: "New York",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.8,
 		price: 3500000,
@@ -47,8 +47,8 @@ export const InternationalData: DestinationInterface[] = [
 		link: "international/new-york",
 	},
 	{
-		province: "UAE",
-		location: "Dubai",
+		location: "UAE",
+		name: "Dubai",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.9,
 		price: 4200000,
@@ -56,8 +56,8 @@ export const InternationalData: DestinationInterface[] = [
 		link: "international/dubai",
 	},
 	{
-		province: "UK",
-		location: "London",
+		location: "UK",
+		name: "London",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.7,
 		price: 3900000,
@@ -65,8 +65,8 @@ export const InternationalData: DestinationInterface[] = [
 		link: "international/london",
 	},
 	{
-		province: "Singapore",
-		location: "Marina Bay",
+		location: "Singapore",
+		name: "Marina Bay",
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.8,
 		price: 2850000,
