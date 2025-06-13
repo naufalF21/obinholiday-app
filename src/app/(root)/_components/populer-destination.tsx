@@ -1,42 +1,12 @@
 "use client";
 
 import { DestinationCard } from "@/components/ui/card";
+import { LocalData } from "@/data/destination/local";
 import React from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const PopulerDestination = () => {
-	const destinations = [
-		{
-			province: "Bali",
-			location: "Nusa Dua",
-			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
-			rating: 4.5,
-			price: 500000,
-		},
-		{
-			province: "Sulawesi Utara",
-			location: "Taman Bunaken",
-			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
-			rating: 4.4,
-			price: 700000,
-		},
-		{
-			province: "NTB",
-			location: "Gunung Rinjani",
-			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
-			rating: 4.6,
-			price: 600000,
-		},
-		{
-			province: "Sumatera Utara",
-			location: "Danau Toba",
-			image: "https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg",
-			rating: 4.5,
-			price: 800000,
-		},
-	];
-
 	return (
 		<header className="w-full pt-16">
 			<div className="container mx-auto px-6 lg:px-10">
@@ -81,8 +51,8 @@ const PopulerDestination = () => {
 							} as React.CSSProperties
 						}
 					>
-						{destinations.map((destination) => (
-							<SwiperSlide key={destination.location}>
+						{LocalData.map((destination, index) => (
+							<SwiperSlide key={index}>
 								<DestinationCard destination={destination} />
 							</SwiperSlide>
 						))}
