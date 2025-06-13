@@ -8,7 +8,7 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.8,
 		price: 2500000,
 		icon: "mage:map-marker-fill",
-		link: "international/paris",
+		link: "paris",
 	},
 	{
 		location: "Japan",
@@ -17,7 +17,7 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.9,
 		price: 3000000,
 		icon: "mage:map-marker-fill",
-		link: "international/tokyo",
+		link: "tokyo",
 	},
 	{
 		location: "Italy",
@@ -26,7 +26,7 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.7,
 		price: 2750000,
 		icon: "mage:map-marker-fill",
-		link: "international/rome",
+		link: "rome",
 	},
 	{
 		location: "Spain",
@@ -35,7 +35,7 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.6,
 		price: 2450000,
 		icon: "mage:map-marker-fill",
-		link: "international/barcelona",
+		link: "barcelona",
 	},
 	{
 		location: "USA",
@@ -44,7 +44,7 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.8,
 		price: 3500000,
 		icon: "mage:map-marker-fill",
-		link: "international/new-york",
+		link: "new-york",
 	},
 	{
 		location: "UAE",
@@ -53,7 +53,7 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.9,
 		price: 4200000,
 		icon: "mage:map-marker-fill",
-		link: "international/dubai",
+		link: "dubai",
 	},
 	{
 		location: "UK",
@@ -62,7 +62,7 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.7,
 		price: 3900000,
 		icon: "mage:map-marker-fill",
-		link: "international/london",
+		link: "london",
 	},
 	{
 		location: "Singapore",
@@ -71,6 +71,6 @@ export const InternationalData: DestinationInterface[] = [
 		rating: 4.8,
 		price: 2850000,
 		icon: "mage:map-marker-fill",
-		link: "international/marina-bay",
+		link: "marina-bay",
 	},
 ];

@@ -37,7 +37,7 @@ const Navbar = () => {
 			<MobileMenu isOpen={isOpen} handleCloseMenu={handleCloseMenu} data={nav} />
 			<div className="container px-6 lg:px-10 mx-auto">
 				<div className="flex items-center justify-between">
-					<div className="w-fit">
+					<Link href="/" className="w-fit">
 						<Image
 							src="/assets/logo/text-logo.png"
 							alt="Obin Holiday Logo"
@@ -45,7 +45,7 @@ const Navbar = () => {
 							height={100}
 							className="object-contain"
 						/>
-					</div>
+					</Link>
 					<NavigationMenu>
 						<NavigationMenuList className="hidden lg:flex">
 							{nav.map((item) => (
