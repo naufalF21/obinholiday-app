@@ -1,27 +1,23 @@
+import { DestinationInterface } from "@/types/destination";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
+import Link from "next/link";
 
-interface DestinationCardProps {
-	province: string;
-	location: string;
-	image: string;
-	rating: number;
-	price: number;
-}
-
-const DestinationCard = ({ destination }: { destination: DestinationCardProps }) => {
-	const { province, location, image, rating, price } = destination;
+const DestinationCard = ({ destination }: { destination: DestinationInterface }) => {
+	const { name, location, image, rating, price, link } = destination;
 
 	return (
 		<div className="w-full relative mb-24">
 			<div className="h-[350px]  overflow-hidden rounded-md group">
-				<Image
-					src={image}
-					alt=""
-					width={400}
-					height={300}
-					className="w-full h-full object-cover group-hover:scale-125 transition duration-500"
-				/>
+				<Link href={`${link}`}>
+					<Image
+						src={image}
+						alt=""
+						width={400}
+						height={300}
+						className="w-full h-full object-cover group-hover:scale-125 transition duration-500"
+					/>
+				</Link>
 			</div>
 			<div className="w-full flex justify-center">
 				<div className="w-[90%] bg-white rounded-md p-6 shadow-lg absolute -bottom-16">
@@ -34,7 +30,7 @@ const DestinationCard = ({ destination }: { destination: DestinationCardProps })
 									height="20"
 									className="text-primary"
 								/>
-								<p className="text-xs font-medium capitalize">{province}</p>
+								<p className="text-xs font-medium capitalize">{location}</p>
 							</div>
 							<div className="flex gap-2">
 								<Icon
@@ -46,14 +42,19 @@ const DestinationCard = ({ destination }: { destination: DestinationCardProps })
 								<p className="text-sm font-medium">{rating}</p>
 							</div>
 						</div>
-						<h2 className="font-bold text-lg text-black mb-4 capitalize">{location}</h2>
+						<h2 className="font-bold text-lg text-black capitalize min-h-[4rem]">
+							{name}
+						</h2>
 						<div className="flex justify-between items-center">
 							<p className="font-semibold text-lg capitalize text-gray-700">
 								Rp. {price.toLocaleString()}
 							</p>
-							<div className="w-[40px] h-[40px] bg-[#134B70] rounded-full flex justify-center items-center hover:bg-white border shadow-md hover:border-[#134B70] hover:text-[#134B70] text-white cursor-pointer">
+							<Link
+								href={`${link}`}
+								className="w-[40px] h-[40px] bg-[#134B70] rounded-full flex justify-center items-center hover:bg-white border shadow-md hover:border-[#134B70] hover:text-[#134B70] text-white cursor-pointer"
+							>
 								<Icon icon="mage:chevron-right" width="20" height="20" />
-							</div>
+							</Link>
 						</div>
 					</div>
 				</div>

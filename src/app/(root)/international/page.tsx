@@ -8,7 +8,7 @@ export default function International() {
 				<div className="mb-4">
 					<h2 className="text-2xl font-bold mb-8 md:text-start text-center">
 						Populer International <span className="text-[#134B70]">Destination</span>{" "}
-						TravelFun
+						Obin Holiday
 					</h2>
 					<div className="flex flex-col space-x-4 overflow-x-auto py-4 px-2">
 						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">

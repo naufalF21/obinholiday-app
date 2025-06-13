@@ -9,7 +9,7 @@ export const LocalData: DestinationInterface[] = [
 		rating: 4.5,
 		price: 3750000,
 		icon: "mage:map-marker-fill",
-		link: "local/bromo-tumpak-sewu-kawah-ijen",
+		link: "bromo-tumpak-sewu-kawah-ijen",
 		itinerary: [
 			{
 				day: 1,
@@ -70,7 +70,7 @@ export const LocalData: DestinationInterface[] = [
 		rating: 4.8,
 		price: 3250000,
 		icon: "mage:map-marker-fill",
-		link: "local/bromo-tumpak-sewu-malang-batu",
+		link: "bromo-tumpak-sewu-malang-batu",
 		itinerary: [
 			{
 				day: 1,
@@ -121,7 +121,7 @@ export const LocalData: DestinationInterface[] = [
 		rating: 4.7,
 		price: 750000,
 		icon: "mage:map-marker-fill",
-		link: "local/gili-trawangan",
+		link: "gili-trawangan",
 		itinerary: [
 			{
 				day: 1,
@@ -190,7 +190,7 @@ export const LocalData: DestinationInterface[] = [
 		rating: 4.7,
 		price: 5500000,
 		icon: "mage:map-marker-fill",
-		link: "local/bali-fullboard",
+		link: "bali-fullboard",
 		itinerary: [
 			{
 				day: 1,

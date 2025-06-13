@@ -10,7 +10,7 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 	return (
 		<div className="card-hover bg-white rounded-xl shadow-lg">
 			<div className="relative overflow-hidden rounded-t-xl h-56">
-				<Link href={link}>
+				<Link href={`/local/${link}`}>
 					<Image
 						alt="Nusa Dua"
 						className="w-full h-full object-cover transform hover:scale-110 transition duration-500"
@@ -41,7 +41,7 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 				<div className="flex justify-end items-center">
 					<Link
 						className="plus-button bg-primary text-white rounded-full p-2 hover:shadow-lg w-fit"
-						href={link}
+						href={`/local/${link}`}
 					>
 						<Icon icon="mage:plus" className="w-6 h-6" />
 					</Link>
