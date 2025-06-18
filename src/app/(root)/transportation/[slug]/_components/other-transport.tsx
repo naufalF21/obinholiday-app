@@ -33,7 +33,7 @@ const OtherTransport = () => {
 							spaceBetween: 20,
 						},
 					}}
-					className="h-[460px] md:h-[470px]"
+					className="h-[500px] md:h-[470px]"
 					style={
 						{
 							"--swiper-pagination-color": "#134B70",
