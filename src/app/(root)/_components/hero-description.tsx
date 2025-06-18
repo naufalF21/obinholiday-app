@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const HeroDescription = () => {
 	return (
@@ -38,14 +39,18 @@ const HeroDescription = () => {
 					other new andinteresting things.
 				</p>
 				<div className="flex gap-5 flex-col md:flex-row">
-					<Button className="text-base">
-						Explore Now
-						<Icon icon="mage:caret-right-fill" width="24" height="24" />
-					</Button>
-					<Button variant="outline" className="text-base">
-						Packages
-						<Icon icon="mage:archive-fill" width="24" height="24" />
-					</Button>
+					<Link href="/local" className="md:w-fit">
+						<Button className="text-base w-full">
+							Explore Now
+							<Icon icon="mage:caret-right-fill" width="24" height="24" />
+						</Button>
+					</Link>
+					<Link href="/international" className="md:w-fit">
+						<Button variant="outline" className="text-base w-full">
+							Packages
+							<Icon icon="mage:archive-fill" width="24" height="24" />
+						</Button>
+					</Link>
 				</div>
 			</div>
 		</>

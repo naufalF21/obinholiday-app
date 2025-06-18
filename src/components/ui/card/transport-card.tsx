@@ -1,11 +1,17 @@
+"use client";
+
 import { TransportationInterface } from "@/types/transportation";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const TransportCard = ({ transport }: { transport: TransportationInterface }) => {
-	const { type, name, image, price, rating, icon, link } = transport;
+	const { type, model, image, rating, icon, link, options } = transport;
+
+	const pathname = usePathname();
+	const updatedLink = pathname === "/transportation" ? `/transportation/${link}` : link;
 
 	return (
 		<div className="card-hover bg-white rounded-xl shadow-lg">
@@ -22,7 +28,7 @@ const TransportCard = ({ transport }: { transport: TransportationInterface }) =>
 				<div className="flex items-center justify-between">
 					<div className="flex items-center gap-2">
 						<Icon icon={icon} width="16" height="16" className="text-primary" />
-						<span className="text-gray-600 text-sm">{type}</span>
+						<span className="text-gray-600 text-sm">{model ?? "-"}</span>
 					</div>
 					<div className="text-gray-600 text-sm flex items-center gap-2">
 						<Icon
@@ -34,12 +40,14 @@ const TransportCard = ({ transport }: { transport: TransportationInterface }) =>
 						<span>{rating}</span>
 					</div>
 				</div>
-				<h3 className="text-xl font-semibold">{name}</h3>
-				<p className="text-gray-600 text-base">Rp. {price.toLocaleString()}</p>
+				<h3 className="text-xl font-semibold">{type}</h3>
+				<p className="text-gray-600 text-base">
+					Rp. {options?.[0]?.price_per_day.toLocaleString()}
+				</p>
 				<div className="flex justify-end items-center">
 					<Link
 						className="plus-button bg-primary text-white rounded-full p-2 hover:shadow-lg w-fit"
-						href={link}
+						href={updatedLink}
 					>
 						<Icon icon="mage:plus" className="w-6 h-6" />
 					</Link>

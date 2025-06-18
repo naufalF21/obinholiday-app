@@ -32,7 +32,9 @@ const InformationSection = ({ data }: { data: DestinationInterface }) => {
 						</BreadcrumbItem>
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>
-							<BreadcrumbLink href="/local">Wisata Lokal</BreadcrumbLink>
+							<BreadcrumbLink href="/international">
+								Wisata Luar Negeri
+							</BreadcrumbLink>
 						</BreadcrumbItem>
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>
