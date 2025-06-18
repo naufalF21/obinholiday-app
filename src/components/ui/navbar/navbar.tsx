@@ -58,7 +58,9 @@ const Navbar = () => {
 											href={item.href}
 											className={clsx({
 												"text-primary font-semibold":
-													pathname === item.href,
+													pathname === item.href ||
+													(item.href !== "/" &&
+														pathname.startsWith(item.href)),
 											})}
 										>
 											{item.name}
