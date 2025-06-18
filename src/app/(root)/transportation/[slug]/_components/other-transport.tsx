@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import TransportCard from "@/components/ui/card/transport-card";
 import { TransportationData } from "@/data/transportation";
 
-const OtherDestination = () => {
+const OtherTransport = () => {
 	return (
 		<div className="flex flex-col gap-5">
 			<h3 className="font-semibold capitalize text-2xl text-black">
@@ -56,4 +56,4 @@ const OtherDestination = () => {
 	);
 };
 
-export default OtherDestination;
+export default OtherTransport;
