@@ -12,12 +12,12 @@ import {
 } from "@/components/ui/breadcrumb";
 
 const InformationSection = ({ data }: { data: DestinationInterface }) => {
-	const { location, name, duration, price } = data;
+	const { location, name, duration, price, image } = data;
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 			<div>
 				<Image
-					src="https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg"
+					src={image}
 					alt="img"
 					width={1000}
 					height={1000}
@@ -32,7 +32,9 @@ const InformationSection = ({ data }: { data: DestinationInterface }) => {
 						</BreadcrumbItem>
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>
-							<BreadcrumbLink href="/local">Wisata Lokal</BreadcrumbLink>
+							<BreadcrumbLink href="/international">
+								Wisata Luar Negeri
+							</BreadcrumbLink>
 						</BreadcrumbItem>
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>

@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { DestinationInterface } from "@/types/destination";
 import {
 	Breadcrumb,
 	BreadcrumbItem,
@@ -10,9 +9,16 @@ import {
 	BreadcrumbPage,
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import { TransportationInterface } from "@/types/transportation";
+import {
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
+} from "@/components/ui/accordion";
 
-const InformationSection = ({ data }: { data: DestinationInterface }) => {
-	const { location, name, duration, price, image } = data;
+const InformationSection = ({ data }: { data: TransportationInterface }) => {
+	const { type, image, options, model } = data;
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 			<div>
@@ -32,56 +38,39 @@ const InformationSection = ({ data }: { data: DestinationInterface }) => {
 						</BreadcrumbItem>
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>
-							<BreadcrumbLink href="/local">Wisata Lokal</BreadcrumbLink>
+							<BreadcrumbLink href="/transportation">Transportasi</BreadcrumbLink>
 						</BreadcrumbItem>
 						<BreadcrumbSeparator />
 						<BreadcrumbItem>
-							<BreadcrumbPage>{name}</BreadcrumbPage>
+							<BreadcrumbPage>{type}</BreadcrumbPage>
 						</BreadcrumbItem>
 					</BreadcrumbList>
 				</Breadcrumb>
 				<h1 className="font-semibold text-3xl/normal">
-					Paket Wisata {name} {duration}
+					{type} {model ? `dengan model ${model}` : ""}
 				</h1>
 				<hr />
-				<ul className="flex flex-col gap-3">
-					{[
-						{
-							icon: "mage:map-marker-fill",
-							label: "Tujuan Wisata",
-							value: `${name}, ${location}`,
-						},
-						{
-							icon: "mage:clock-fill",
-							label: "Durasi",
-							value: duration,
-						},
-						{
-							icon: "mage:tag-fill",
-							label: "Harga",
-							value: `Rp. ${price.toLocaleString()}`,
-						},
-					].map((item, index) => (
-						<li key={index} className="flex md:items-center gap-2">
-							<span>
-								<Icon icon={item.icon} className="text-primary size-5" />
-							</span>
-							<span className="text-sm/normal md:text-base">
-								{item.label}: {item.value}
-							</span>
-						</li>
-					))}
+				<ul>
+					<Accordion type="multiple">
+						{options?.map((item, index) => (
+							<AccordionItem key={index} value={`opsi-${index + 1}`}>
+								<AccordionTrigger className="text-base">
+									Opsi ke {index + 1} (Rp. {item.price_per_day.toLocaleString()})
+								</AccordionTrigger>
+								<AccordionContent>
+									<span>- Kapasitas: {item.capacity}</span>
+									<div className="flex flex-col">
+										{item.features.map((feature, index) => (
+											<span key={index}>- {feature}</span>
+										))}
+									</div>
+								</AccordionContent>
+							</AccordionItem>
+						))}
+					</Accordion>
 				</ul>
 
-				<p className="text-sm tracking-wider leading-relaxed">
-					Nikmati perjalanan wisata yang telah direncanakan dengan matang ke {name},{" "}
-					{location}. Paket {duration} ini menawarkan pengalaman liburan yang nyaman
-					dengan jadwal yang terorganisir, sehingga Anda dapat fokus menikmati setiap
-					momen tanpa perlu khawatir dengan detail perjalanan. Kami telah menyiapkan
-					akomodasi terbaik, transportasi yang nyaman, dan pemandu wisata berpengalaman
-					untuk memastikan liburan Anda berkesan dan tak terlupakan. Jelajahi keindahan
-					alam, budaya, dan kuliner lokal bersama kami.
-				</p>
+				<p className="text-sm tracking-wider leading-relaxed"></p>
 
 				<div className="flex flex-col gap-3">
 					<span>Share:</span>

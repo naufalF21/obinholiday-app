@@ -1,10 +1,14 @@
 export interface TransportationInterface {
 	type: string;
-	name: string;
+	model: string | null;
 	image: string;
-	capacity: string;
-	price: number;
 	rating: number;
 	icon: string;
 	link: string;
+	note?: string;
+	options?: Array<{
+		capacity: string;
+		features: Array<string>;
+		price_per_day: number;
+	}>;
 }
