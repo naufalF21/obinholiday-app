@@ -12,8 +12,6 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 	const { name, location, image, rating, price, icon, link } = destination;
 	const href = pathname + "/" + link;
 
-	console.log(pathname);
-
 	return (
 		<div className="card-hover bg-white rounded-xl shadow-lg">
 			<div className="relative overflow-hidden rounded-t-xl h-56">
