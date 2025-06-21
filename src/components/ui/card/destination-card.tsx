@@ -53,7 +53,10 @@ const DestinationCard = ({ destination }: { destination: DestinationInterface })
 						</h2>
 						<div className="flex justify-between items-center">
 							<p className="font-semibold text-lg capitalize text-gray-700">
-								Rp. {price.toLocaleString()}
+								Rp.{" "}
+								{typeof price === "object" && price !== null
+									? Object.values(price)[0]?.toLocaleString()
+									: price.toLocaleString()}
 							</p>
 							<Link
 								href={updatedLink}

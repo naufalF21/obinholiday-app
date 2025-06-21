@@ -45,32 +45,46 @@ const InformationSection = ({ data }: { data: DestinationInterface }) => {
 				</h1>
 				<hr />
 				<ul className="flex flex-col gap-3">
-					{[
-						{
-							icon: "mage:map-marker-fill",
-							label: "Tujuan Wisata",
-							value: `${name}, ${location}`,
-						},
-						{
-							icon: "mage:clock-fill",
-							label: "Durasi",
-							value: duration,
-						},
-						{
-							icon: "mage:tag-fill",
-							label: "Harga",
-							value: `Rp. ${price.toLocaleString()}`,
-						},
-					].map((item, index) => (
-						<li key={index} className="flex md:items-center gap-2">
+					<li className="flex md:items-center gap-2">
+						<span>
+							<Icon icon="mage:map-marker-fill" className="text-primary size-5" />
+						</span>
+						<span className="text-sm/normal md:text-base">
+							Tujuan Wisata: {name}, {location}
+						</span>
+					</li>
+					<li className="flex md:items-center gap-2">
+						<span>
+							<Icon icon="mage:clock-fill" className="text-primary size-5" />
+						</span>
+						<span className="text-sm/normal md:text-base">Durasi: {duration}</span>
+					</li>
+					{typeof price === "object" ? (
+						<div className="flex items-start gap-2">
 							<span>
-								<Icon icon={item.icon} className="text-primary size-5" />
+								<Icon icon="mage:tag-fill" className="text-primary size-5" />
 							</span>
-							<span className="text-sm/normal md:text-base">
-								{item.label}: {item.value}
+							<span>Harga: </span>
+							<ul>
+								{Object.entries(price).map(([hotel, price]) => (
+									<li key={hotel} className="text-sm/normal md:text-base">
+										- {hotel}: Rp. {price.toLocaleString()}
+									</li>
+								))}
+							</ul>
+						</div>
+					) : (
+						<li className="flex md:items-center gap-2">
+							<span>
+								<Icon icon="mage:tag-fill" className="text-primary size-5" />
+							</span>
+							<span>
+								<span className="text-sm/normal md:text-base">
+									Harga: Rp. {price.toLocaleString()}
+								</span>
 							</span>
 						</li>
-					))}
+					)}
 				</ul>
 
 				<p className="text-sm tracking-wider leading-relaxed">
