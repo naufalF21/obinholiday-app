@@ -139,7 +139,7 @@ export const LocalData: DestinationInterface[] = [
 			{
 				day: 1,
 				date: "19 Mei 2025",
-				dress_code: "nuansa hijau",
+				dress_code: "Nuansa hijau",
 				activities: [
 					"11.00 - 12.00 Wib: Tiba di Bandara Ahmad Yani Semarang",
 					"12.00 - 12.30 Wib: Makan siang di Soto Mbak Lin",
@@ -154,7 +154,7 @@ export const LocalData: DestinationInterface[] = [
 			{
 				day: 2,
 				date: "20 Mei 2025",
-				dress_code: "motif bunga2 warna cerah",
+				dress_code: "Motif bunga2 warna cerah",
 				activities: [
 					"07.00 - 08.00 Wib: Breakfast di hotel",
 					"09.00 - 11.00 Wib: Wisata VW Borobudur-Magelang",
@@ -169,11 +169,11 @@ export const LocalData: DestinationInterface[] = [
 			{
 				day: 3,
 				date: "21 Mei 2025",
-				dress_code: {
-					morning: "kaos piknik IIDI warna Burgundy + bawahan coksu, kerudung coksu/krem",
-					evening: "atasan pink/ungu",
-					note: "#bawa baju ganti#",
-				},
+				dress_code: [
+					"Pagi: kaos piknik IIDI warna Burgundy + bawahan coksu, kerudung coksu/krem",
+					"Malam: atasan pink/ungu",
+					"Note: bawa baju ganti",
+				],
 				activities: [
 					"07.00 - 08.00 Wib: Breakfast di hotel",
 					"09.00 - 13.00 Wib: Omah Kecebong (wisata busana kebaya + makan siang)",
@@ -187,7 +187,7 @@ export const LocalData: DestinationInterface[] = [
 			{
 				day: 4,
 				date: "22 Mei 2025",
-				dress_code: "bebas",
+				dress_code: "Bebas",
 				activities: [
 					"06.00 - 07.00 Wib: Breakfast di hotel",
 					"09.00 Wib: Pulang ke Banjarmasin dengan Lion Air pk. 09.00 Wib",

@@ -32,7 +32,20 @@ const Itinerary = ({ data }: { data: DestinationInterface }) => {
 					{data.itinerary?.map((item, index) => (
 						<AccordionItem value={`day-${item.day}`} key={index}>
 							<AccordionTrigger className="text-base">
-								Hari ke {item.day}
+								Hari ke {item.day}{" "}
+								{item.dress_code && (
+									<>
+										{typeof item.dress_code === "object" ? (
+											<>
+												<br /> Dress Code: ({item.dress_code.join(" - ")})
+											</>
+										) : (
+											<>
+												<br /> Dress Code: {item.dress_code}
+											</>
+										)}
+									</>
+								)}
 							</AccordionTrigger>
 							<AccordionContent>
 								<ul>

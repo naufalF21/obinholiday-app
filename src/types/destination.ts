@@ -1,9 +1,3 @@
-interface DressCode {
-	morning?: string;
-	evening?: string;
-	note?: string;
-}
-
 export interface DestinationInterface {
 	location: string;
 	name: string;
@@ -23,7 +17,7 @@ export interface DestinationInterface {
 	itinerary?: Array<{
 		day: number;
 		date?: string;
-		dress_code?: string | DressCode;
+		dress_code?: string | Array<string>;
 		activities: string[];
 	}>;
 	notes?: {
