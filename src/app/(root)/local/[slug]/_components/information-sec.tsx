@@ -68,7 +68,7 @@ const InformationSection = ({ data }: { data: DestinationInterface }) => {
 							<ul>
 								{Object.entries(price).map(([hotel, price]) => (
 									<li key={hotel} className="text-sm/normal md:text-base">
-										- {hotel}: {price}
+										- {hotel}: Rp. {price.toLocaleString()}
 									</li>
 								))}
 							</ul>

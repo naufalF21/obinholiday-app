@@ -202,8 +202,8 @@ export const LocalData: DestinationInterface[] = [
 		image: "https://storage.googleapis.com/a1aa/image/0sh4Rqm1Wjsagm2ZcS4F9Rrm-HEyxFmddMZQQ2lkJwE.jpg",
 		rating: 4.7,
 		price: {
-			"Episode Hotel": "IDR. 5,500,000/pax",
-			"Conjioo Hotel": "IDR. 4,500,000/pax",
+			"Episode Hotel": 5500000,
+			"Conjioo Hotel": 4500000,
 		},
 		icon: "mage:map-marker-fill",
 		link: "bali-fullboard",

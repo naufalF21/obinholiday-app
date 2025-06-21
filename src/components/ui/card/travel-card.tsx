@@ -42,7 +42,12 @@ const TravelCard = ({ destination }: { destination: DestinationInterface }) => {
 					</div>
 				</div>
 				<h3 className="text-xl font-semibold min-h-[3rem]">{name}</h3>
-				<p className="text-gray-600 text-base">Rp. {price.toLocaleString()}</p>
+				<p className="text-gray-600 text-base">
+					Rp.{" "}
+					{typeof price === "object" && price !== null
+						? Object.values(price)[0]?.toLocaleString()
+						: price.toLocaleString()}
+				</p>
 				<div className="flex justify-end items-center">
 					<Link
 						className="plus-button bg-primary text-white rounded-full p-2 hover:shadow-lg w-fit"
