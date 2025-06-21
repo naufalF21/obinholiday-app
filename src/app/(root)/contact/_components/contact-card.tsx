@@ -25,7 +25,7 @@ const ContactCard = () => {
 
 	return (
 		<div className="flex flex-col lg:flex-row gap-5 lg:gap-10 bg-white z-10 rounded-lg p-2 shadow-md w-full md:w-fit mx-auto">
-			<div className="flex flex-col gap-10 lg:max-w-lg bg-primary text-white p-12 rounded-lg">
+			<div className="flex flex-col gap-10 lg:max-w-lg bg-primary text-white md:p-12 p-10 rounded-lg">
 				<div className="flex flex-col gap-2">
 					<h5 className="text-2xl font-semibold">Contact Information</h5>
 					<p className="text-sm font-light">
@@ -49,7 +49,7 @@ const ContactCard = () => {
 					))}
 				</ul>
 			</div>
-			<div className="p-12">
+			<div className="md:p-12 p-10">
 				<div className="flex flex-col gap-5 lg:min-w-xl">
 					<h5 className="text-2xl font-semibold">Send us a message</h5>
 					<ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
