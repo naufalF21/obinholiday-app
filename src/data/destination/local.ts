@@ -116,15 +116,15 @@ export const LocalData: DestinationInterface[] = [
 	{
 		name: "Semarang - Yogyakarta - Solo",
 		location: "Jawa Tengah",
-		dates: "19-22 Mei 2025",
+		duration: "4 Hari 3 Malam",
 		flights: [
 			{
-				route: "Bdj-Srg",
+				route: "Banjarmasin-Semarang (BJG-SRG)",
 				time: "10.35-10.50",
 				airline: "Citilink",
 			},
 			{
-				route: "Jog-Bdj",
+				route: "Jogja-Banjarmasin (JOG-BJG)",
 				time: "09.00-11.25",
 				airline: "Lion Air",
 			},
