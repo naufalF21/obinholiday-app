@@ -1,6 +1,5 @@
 import React from "react";
 import ContactCard from "./_components/contact-card";
-import MapSection from "./_components/map-section";
 
 const Contact = () => {
 	return (
@@ -19,7 +18,6 @@ const Contact = () => {
 					<ContactCard />
 				</div>
 			</div>
-			<MapSection />
 		</div>
 	);
 };

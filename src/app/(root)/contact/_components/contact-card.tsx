@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input, Textarea } from "@/components/ui/input";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
+import MapSection from "./map-section";
 
 const ContactCard = () => {
 	const contactInformation = [
@@ -17,14 +18,14 @@ const ContactCard = () => {
 			description: "obinholiday@gmail.com",
 		},
 		{
-			icon: "mage:map-marker",
+			icon: "mage:phone",
 			title: "Call Us",
 			description: "Phone: +6281 2002 2021",
 		},
 	];
 
 	return (
-		<div className="flex flex-col lg:flex-row gap-5 lg:gap-10 bg-white z-10 rounded-lg p-2 shadow-md w-full md:w-fit mx-auto">
+		<div className="flex flex-col lg:flex-row gap-5 bg-white z-10 rounded-lg p-2 shadow-md w-full md:w-full mx-auto">
 			<div className="flex flex-col gap-10 lg:max-w-lg bg-primary text-white md:p-12 p-10 rounded-lg">
 				<div className="flex flex-col gap-2">
 					<h5 className="text-2xl font-semibold">Contact Information</h5>
@@ -49,8 +50,9 @@ const ContactCard = () => {
 					))}
 				</ul>
 			</div>
-			<div className="md:p-12 p-10">
-				<div className="flex flex-col gap-5 lg:min-w-xl">
+			<div className="w-full">
+				<MapSection />
+				{/* <div className="flex flex-col gap-5 lg:min-w-xl">
 					<h5 className="text-2xl font-semibold">Send us a message</h5>
 					<ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
 						<li className="flex flex-col gap-2">
@@ -73,7 +75,7 @@ const ContactCard = () => {
 							<Button className="w-full md:fit">Send Message</Button>
 						</li>
 					</ul>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
