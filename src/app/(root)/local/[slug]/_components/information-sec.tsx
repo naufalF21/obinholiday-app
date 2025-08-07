@@ -18,6 +18,7 @@ const InformationSection = ({ data }: { data: DestinationInterface }) => {
 	return (
 		<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 			<Gallery data={data} />
+
 			<div className="flex flex-col gap-6">
 				<Breadcrumb>
 					<BreadcrumbList>
