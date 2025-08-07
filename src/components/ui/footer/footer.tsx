@@ -82,33 +82,33 @@ const Footer = () => {
 						<div className="flex flex-col text-primary text-sm gap-5">
 							<h3 className="text-lg font-semibold">Explore</h3>
 							<div className="flex flex-col gap-3">
-								<a
-									href="#"
+								<Link
+									href="/"
 									className="hover:text-[#508C9B] transition-colors block"
 								>
-									About Us
-								</a>
+									Beranda
+								</Link>
 
-								<a
-									href="#"
+								<Link
+									href="/local"
 									className="hover:text-[#508C9B] transition-colors block"
 								>
-									Our Services
-								</a>
+									Overland Indonesia
+								</Link>
 
-								<a
-									href="#"
+								<Link
+									href="/transportation"
 									className="hover:text-[#508C9B] transition-colors block"
 								>
-									Privacy Policy
-								</a>
+									Transportasi
+								</Link>
 
-								<a
-									href="#"
+								<Link
+									href="/contact"
 									className="hover:text-[#508C9B] transition-colors block"
 								>
-									Terms & Conditions
-								</a>
+									Contact Us
+								</Link>
 							</div>
 						</div>
 					</div>
