@@ -10,6 +10,8 @@ export interface DestinationInterface {
 	hotel?: string;
 	duration?: string;
 	image: string;
+	images?: Array<string>;
+	videos?: Array<string>;
 	rating: number;
 	price: number | object;
 	icon: string;

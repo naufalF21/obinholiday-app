@@ -45,12 +45,12 @@ const HeroDescription = () => {
 							<Icon icon="mage:caret-right-fill" width="24" height="24" />
 						</Button>
 					</Link>
-					<Link href="/international" className="md:w-fit">
+					{/* <Link href="/international" className="md:w-fit">
 						<Button variant="outline" className="text-base w-full">
 							Packages
 							<Icon icon="mage:archive-fill" width="24" height="24" />
 						</Button>
-					</Link>
+					</Link> */}
 				</div>
 			</div>
 		</>
