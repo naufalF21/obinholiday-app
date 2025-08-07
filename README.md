@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# obinholiday-app
 
-## Getting Started
+Website berbasis **Next.js**, dibuat dengan `create-next-app` dan dikembangkan menggunakan struktur **App Router**.
 
-First, run the development server:
+## Prasyarat
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Node.js** (versi 18.18 atau lebih baru)  
+- Package manager seperti: `npm`, `yarn`, `pnpm`, atau `bun`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cara Install & Jalankan
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone repository ini:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    git clone https://github.com/naufalF21/obinholiday-app.git
+    cd obinholiday-app
+    ```
 
-## Learn More
+2. **Install dependencies:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```bash
+    npm install
+    # atau
+    yarn install
+    # atau
+    pnpm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Jalankan server development:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev
+    # atau
+    yarn dev
+    # atau
+    pnpm dev
+    ```
 
-## Deploy on Vercel
+4. **Buka di browser:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Akses `http://localhost:3000` untuk melihat aplikasi berjalan.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. **Edit halaman utama:**
+
+    Anda bisa memodifikasi file `app/page.tsx`. Perubahan akan langsung terlihat karena fitur hot reload dari Next.js.
+
+## Struktur Proyek
+
+- `app/` — Direktori utama untuk route (App Router - Next.js 13+)
+- `public/` — Aset statis seperti gambar dan favicon
+- `next.config.ts`, `tsconfig.json`, dll — File konfigurasi
+
+## Script yang Tersedia
+
+Berikut script dari `package.json`:
+
+| Script    | Fungsi                                               |
+|-----------|------------------------------------------------------|
+| `dev`     | Menjalankan development server (`next dev`)          |
+| `build`   | Membuat bundle siap produksi (`next build`)          |
+| `start`   | Menjalankan aplikasi produksi (`next start`)         |
+| `lint`    | Mengecek masalah dengan ESLint (`next lint`)         |
+
+## Tambahan
+
+- Anda bisa men-deploy ke **Vercel** atau layanan lain yang mendukung Next.js.
+- Pastikan `.env` tersedia jika proyek ini menggunakan environment variables.
+
+---
+
+**Lisensi**: [MIT](LICENSE)
