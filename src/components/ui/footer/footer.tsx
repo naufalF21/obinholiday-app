@@ -24,23 +24,27 @@ const Footer = () => {
 							</p>
 							<ul className="flex items-center md:gap-3 md:justify-start justify-between">
 								<li className="hover:bg-primary hover:text-white p-2 hover:rounded-full">
-									<Link href="#">
-										<Icon icon="hugeicons:facebook-02" width="24" height="24" />
+									<Link
+										href="https://www.facebook.com/share/1ALShkqerd/"
+										target="_blank"
+									>
+										<Icon icon="mage:facebook" width="24" height="24" />
 									</Link>
 								</li>
 								<li className="hover:bg-primary hover:text-white p-2 hover:rounded-full">
-									<Link href="#">
-										<Icon icon="hugeicons:new-twitter" width="24" height="24" />
+									<Link
+										href="https://www.tiktok.com/@obin_holiday?_t=ZS-8yefk2F9Tg0&_r=1"
+										target="_blank"
+									>
+										<Icon icon="mage:tiktok" width="24" height="24" />
 									</Link>
 								</li>
 								<li className="hover:bg-primary hover:text-white p-2 hover:rounded-full">
-									<Link href="#">
-										<Icon icon="hugeicons:instagram" width="24" height="24" />
-									</Link>
-								</li>
-								<li className="hover:bg-primary hover:text-white p-2 hover:rounded-full">
-									<Link href="#">
-										<Icon icon="hugeicons:youtube" width="26" height="26" />
+									<Link
+										href="https://www.instagram.com/capt.obin?utm_source=qr&igsh=MWhkMTV2cWI1YjMxOQ=="
+										target="_blank"
+									>
+										<Icon icon="mdi:instagram" width="24" height="24" />
 									</Link>
 								</li>
 							</ul>
@@ -52,16 +56,23 @@ const Footer = () => {
 							<h3 className="text-lg font-semibold">Contact Us</h3>
 							<div className="flex flex-col gap-3">
 								<p className="flex items-center gap-2">
-									<Icon icon="mage:map-marker-fill" width="20" height="20" />
-									123 Travel Street, Adventure City
+									<span>
+										<Icon icon="mage:map-marker-fill" width="20" height="20" />
+									</span>
+									Jln. Anggur no. 5 Kelurahan Kidul Dalem, Kecamatan Bangil,
+									Kabupaten Pasuruan, Jawa Timur 67153
 								</p>
 								<p className="flex items-center gap-2">
-									<Icon icon="mage:phone-fill" width="20" height="20" />
-									+1 234 567 890
+									<span>
+										<Icon icon="mage:phone-fill" width="20" height="20" />
+									</span>
+									+62822 4576 3021
 								</p>
 								<p className="flex items-center gap-2">
-									<Icon icon="mage:email-fill" width="20" height="20" />
-									info@travelmate.com
+									<span>
+										<Icon icon="mage:email-fill" width="20" height="20" />
+									</span>
+									obinardhi@gmail.com
 								</p>
 							</div>
 						</div>

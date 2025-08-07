@@ -26,8 +26,8 @@ const Navbar = () => {
 
 	const nav = [
 		{ name: "Beranda", href: "/" },
-		{ name: "Wisata Lokal", href: "/local" },
-		{ name: "Wisata Luar Negeri", href: "/international" },
+		{ name: "Overland Indonesia", href: "/local" },
+		// { name: "Wisata Luar Negeri", href: "/international" },
 		{ name: "Transportasi", href: "/transportation" },
 		{ name: "Contact Us", href: "/contact" },
 	];
@@ -70,9 +70,17 @@ const Navbar = () => {
 							))}
 						</NavigationMenuList>
 					</NavigationMenu>
-					<div className="w-fit hidden lg:block">
-						<Button className="">Book Now</Button>
-					</div>
+					<Link
+						href="https://wa.me/6282245763021"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="w-fit hidden lg:block"
+					>
+						<Button className="cursor-pointer">
+							Book Now
+							<Icon icon="mage:whatsapp" width="24" height="24" />
+						</Button>
+					</Link>
 					<button className="cursor-pointer lg:hidden" onClick={() => setIsOpen(true)}>
 						<Icon icon="mage:dash-menu" width="30" height="30" />
 					</button>
